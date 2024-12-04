@@ -1,3 +1,9 @@
+#### 1.0.0 (2024-12-04)
+
+##### Documentation Changes
+
+* **readme:**  project documentation (a4ce543c)
+
 #### 0.0.2 (2024-12-04)
 
 ##### Bug Fixes
