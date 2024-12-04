@@ -1,73 +1,66 @@
-# Nuxt Layer Starter
+## Shuriken UI Nuxt Template
 
-Create Nuxt extendable layer with this GitHub template.
+This is an extendable Nuxt Layer built on top of [`@shuriken-ui/nuxt`](https://github.com/shuriken-ui/nuxt/), designed to provide a streamlined and customizable collection of components and templates for Nuxt 3 projects.
 
-## Setup
-
-Make sure to install the dependencies:
+## Installation
 
 ```bash
-pnpm install
+pnpm install -D @almsomnia/shuriken-ui-nuxt-template
 ```
 
-## Working on your layer
-
-Your layer is at the root of this repository, it is exactly like a regular Nuxt project, except you can publish it on NPM.
-
-The `.playground` directory should help you on trying your layer during development.
-
-Running `pnpm dev` will prepare and boot `.playground` directory, which imports your layer itself.
-
-## Distributing your layer
-
-Your Nuxt layer is shaped exactly the same as any other Nuxt project, except you can publish it on NPM.
-
-To do so, you only have to check if `files` in `package.json` are valid, then run:
-
-```bash
-npm publish --access public
-```
-
-Once done, your users will only have to run:
-
-```bash
-npm install --save your-layer
-```
-
-Then add the dependency to their `extends` in `nuxt.config`:
+## Usage
 
 ```ts
-defineNuxtConfig({
-  extends: 'your-layer'
+// nuxt.config.ts
+export default defineNuxtConfig({
+   extends: [
+      '@almsomnia/shuriken-ui-nuxt-template'
+   ]
+})
+```
+> **Note**: This is a [layer](https://nuxt.com/docs/getting-started/layers) and not a module, so you must extend your config with it.
+
+
+## Configuration
+
+> See [Shuriken UI documentation](https://shurikenui.com/docs/guide/theming/configuration) for more details.
+
+```ts
+// app.config.ts
+export default defineAppConfig({
+   /**
+    * Shuriken UI layer configuration
+    */
+   nui: {
+      /**
+       * Set default properties for BaseButton component
+       */
+      BaseButton: {
+         variant: 'pastel',
+         rounded: 'md'
+      },
+
+      // ...
+   }
 })
 ```
 
-## Development Server
+## Contributing
 
-Start the development server on http://localhost:3000
+Contributions are welcome! To contribute:
 
-```bash
-pnpm dev
-```
+- Clone this [repository](https://github.com/almsomnia/shuriken-ui-nuxt-template).
+- Install dependencies.
+   ```bash
+   pnpm install
+   ```
+- Make changes and ensure compability.
+- Submit a pull request.
 
-## Production
+## License
 
-Build the application for production:
+This package is licensed under the [MIT License](https://mit-license.org/)
 
-```bash
-pnpm build
-```
+## Acknowledgement
 
-Or statically generate it with:
-
-```bash
-pnpm generate
-```
-
-Locally preview production build:
-
-```bash
-pnpm preview
-```
-
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This package is built on amazing [Shuriken UI](https://shurikenui.com/). Special thanks to the contributors and the community for their support.
