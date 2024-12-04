@@ -4,6 +4,10 @@ const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
    devtools: { enabled: false },
 
+   extends: [
+      '@shuriken-ui/nuxt'
+   ],
+
    components: [
       {
          prefix: '',
