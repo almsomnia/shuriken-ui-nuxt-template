@@ -1,0 +1,29 @@
+{
+  "name": "@almsomnia/shuriken-ui-nuxt-template",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.14.2",
+  "author": {
+    "name": "Riva Almero",
+    "email": "rvalms@icloud.com"
+  },
+  "license": "MIT",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "dev": "nuxi dev .playground",
+    "dev:prepare": "nuxt prepare .playground",
+    "build": "nuxt build .playground",
+    "generate": "nuxt generate .playground",
+    "preview": "nuxt preview .playground",
+    "lint": "eslint .",
+    "clean": "rimraf ./.playground/.nuxt ./.playground/.output ./.playground/node_modules node_modules"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "latest",
+    "eslint": "^9.16.0",
+    "nuxt": "^3.14.1592",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2",
+    "vue": "latest"
+  }
+}
